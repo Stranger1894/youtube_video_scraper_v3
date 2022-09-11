@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Youtube Data</title>
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Youtuber's video data</div>
+
+   <table cellspacing="0">
+      <tr>
+          <th>YouTuber</th>
+          <th>Video Link</th>
+          <th>Commenter</th>
+          <th>Video download Link</th>
+          <th>Likes</th>
+          <th>Number of Comments</th>
+          <th>Video Title</th>
+          <th>Video Thumbnail</th>
+      </tr>
+         {% for data in combined_list %}
+      <tr>
+          <td>{{data['channelname']}}</td>
+          <td>{{data['video_link']}}</td>
+          <td>{{data['commentor_name']}}</td>
+          <td>{{data['sharable_video_url']}} </td>
+          <td>{{data['likes_count']}}</td>
+          <td>{{data['comments_count']}} </td>
+          <td>{{data['video_title']}} </td>
+          <td>{{data['thumbnail_url']}} </td>
+
+
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
